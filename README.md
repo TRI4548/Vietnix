@@ -1,6 +1,6 @@
 
 # Ngày 1
-https://docs.google.com/viewer?url=${https://drive.google.com/file/d/1NRcUYC3rg8NmexbtiQ4-7onIe0pDE-us/view?usp=drive_link}
+<image src="https://github.com/TRI4548/Vietnix/blob/main/certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf"/>
 
 
 # Ngày 2
