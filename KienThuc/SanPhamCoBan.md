@@ -1,5 +1,5 @@
 
-# Các sản phẩm cơ bản
+## Các sản phẩm cơ bản
 
 - Hosting: là một server cung cấp dịch vụ lưu trữ website cho nhiều khách hàng, mỗi khách hàng có thể truy cập website của mình thông qua domain (tên miền)
 
