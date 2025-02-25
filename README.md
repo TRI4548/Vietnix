@@ -1,6 +1,9 @@
 
 # Ngày 1
-<embed src="certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf" type="application/pdf">
+Hoàn thành 
+- Administration Tier 1 | Webhost Fundamental (CPF)
+- Administration Tier 2 | cPanel Professional (CPP)
+![image](https://github.com/user-attachments/assets/5b593f6c-8a8c-4500-9e13-b53ee3984094)
 
 
 # Ngày 2
