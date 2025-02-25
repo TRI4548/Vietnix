@@ -1,6 +1,6 @@
 
 # Ngày 1
-https://github.com/TRI4548/Vietnix/blob/main/certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf
+certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf
 
 
 # Ngày 2
