@@ -1,6 +1,6 @@
 
 # Ngày 1
-certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf
+https://docs.google.com/viewer?url=${https://drive.google.com/file/d/1NRcUYC3rg8NmexbtiQ4-7onIe0pDE-us/view?usp=drive_link}
 
 
 # Ngày 2
