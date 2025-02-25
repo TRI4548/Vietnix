@@ -1,6 +1,6 @@
 
 # Ngày 1
-<image src="https://github.com/TRI4548/Vietnix/blob/main/certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf"/>
+<embed src="certification-cPanel-Professional-Certification-Exam-CPP-samsepiol.pdf" type="application/pdf">
 
 
 # Ngày 2
