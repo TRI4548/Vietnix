@@ -11,6 +11,7 @@
 - backup - chứa các file backup
 
 aaPanel hỗ trợ cli với lệnh: bt
+
 Hỗ trợ API: https://forum.aapanel.com/d/482-api-interface-tutorial
 
 
