@@ -8,9 +8,9 @@
 
 - server - chứa config của các service
 
--   /www/server/panel/vhost/nginx/ - chứa config của web server được chọn là Nginx
+  /www/server/panel/vhost/nginx/ - chứa config của web server được chọn là Nginx
 
--   /www/server/panel/vhost/apache/ - chứa config của web server được chọn là Apache
+  /www/server/panel/vhost/apache/ - chứa config của web server được chọn là Apache
 
 - backup - chứa các file backup
 
