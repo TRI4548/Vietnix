@@ -1,5 +1,5 @@
 
-## cPanel:
+## cPanel Part 1:
 ### Files
 - File Manager: Upload file, xóa, sửa file, nén, giải nén. Ngoài ra để hiển thị file ẩn (.htaccess, .env...).
 
