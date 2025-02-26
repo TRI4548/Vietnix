@@ -27,7 +27,7 @@
 - Remote Database Access: quản lý truy cập từ xa đến database
 
 ### Domains
-- Wordpress Management: quản lý, cài đặt tự động Wordpress có bao gồm các theme và plugin
+- Wordpress Management: quản lý Wordpress tốt hơn, có thể scan và nhận diện mã độc hoặc lỗi về Wordpress Core, dễ dàng xử lý hoặc cài lại Core
 
 - Site publisher & site builder: hỗ trợ người dùng cài đặt các mẫu website tĩnh
 
