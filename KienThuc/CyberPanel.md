@@ -11,7 +11,7 @@
 
 ![image](https://github.com/user-attachments/assets/483e3016-fbef-40f8-a37c-39ed9026a780)
 
-![image](https://github.com/user-attachments/assets/f0f26bfb-87d6-465a-9893-c7f01a3066b8)
+![image](https://github.com/user-attachments/assets/4ee324f0-c317-454a-9610-5ca442aec299)
 
 ## Tạo dự án website ngôn ngữ Lavarel
 ### Tạo Website: Home >> Websites >> Create Website
