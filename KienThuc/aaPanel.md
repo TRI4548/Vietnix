@@ -1,22 +1,22 @@
 ### Cấu trúc file
 
-/www - tất cả các file cấu hình của aaPanel sẽ được đặt ở trong /www, bao gồm:
+- /www - tất cả các file cấu hình của aaPanel sẽ được đặt ở trong /www, bao gồm:
 
-- wwwroot - chứa các domains folder và src web
+  - wwwroot - chứa các domains folder và src web
 
-- wwwlogs - chứa logs
+  - wwwlogs - chứa logs
 
-- server - chứa config của các service
+  - server - chứa config của các service
 
-  /www/server/panel/vhost/nginx/ - chứa config của web server được chọn là Nginx
+  - /www/server/panel/vhost/nginx/ - chứa config của web server được chọn là Nginx
 
-  /www/server/panel/vhost/apache/ - chứa config của web server được chọn là Apache
+  - /www/server/panel/vhost/apache/ - chứa config của web server được chọn là Apache
 
-- backup - chứa các file backup
+  - backup - chứa các file backup
 
-aaPanel hỗ trợ cli với lệnh: bt
+- aaPanel hỗ trợ cli với lệnh: bt
 
-Hỗ trợ API: https://forum.aapanel.com/d/482-api-interface-tutorial
+- Hỗ trợ API: https://forum.aapanel.com/d/482-api-interface-tutorial
 
 
 ### Cài đặt thành công aaPanel
