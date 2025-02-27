@@ -42,3 +42,19 @@ Hỗ trợ API: https://forum.aapanel.com/d/482-api-interface-tutorial
 ### Thực hiện các bước cài đặt còn lại
 ![image](https://github.com/user-attachments/assets/76c58aa0-9981-45ce-8c8a-cde232f5f924)
 
+### Cách bật debug log trong WordPress
+
+1. Tìm file wp-config.php
+2. Tìm đoạn code ở gần cuối
+
+```
+define('WP_DEBUG', false);
+```
+
+3. Thay thế bằng 3 dòng code sau:
+
+```
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
+```
