@@ -13,7 +13,7 @@
 
 ![image](https://github.com/user-attachments/assets/4ee324f0-c317-454a-9610-5ca442aec299)
 
-## Tạo dự án website ngôn ngữ Lavarel
+## Tạo dự án website ngôn ngữ Laravel
 ### Tạo Website: Home >> Websites >> Create Website
 
 ![image](https://github.com/user-attachments/assets/83e65d9d-020c-432a-a9d0-b6cb589c20db)
@@ -31,7 +31,7 @@
 
 ![image](https://github.com/user-attachments/assets/a685ed35-0824-42db-a2cf-a259ea0a7e1e)
 
-### Cài đặt dự án Lavarel
+### Cài đặt dự án Laravel
 1. SSH vào VPS
 2. Chạy các dòng lệnh sau
 
@@ -58,3 +58,13 @@ sudo chmod -R ugo+rw storage
 3. Kiểm tra
 
 ![image](https://github.com/user-attachments/assets/8f0c1fc9-ffe7-4dcf-bbd7-e3cba81af803)
+
+### Bật debug log trong site Laravel
+
+- Truy cập File Manager của website >> tìm file .env
+
+![image](https://github.com/user-attachments/assets/20e82bca-9fbf-428c-a13b-30e2f9a5ed8c)
+
+- Tìm chứ **APP_DEBUG** chuyển **false** thành **true**
+
+![image](https://github.com/user-attachments/assets/c70f4ff2-6d71-4d8b-a9c0-e70452a64386)
