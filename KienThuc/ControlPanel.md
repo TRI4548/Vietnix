@@ -10,8 +10,8 @@ Tùy theo mục đích sử dụng của khách hàng thì ta sẽ chọn ra pan
 
 ## Lab
 
-- aaPanel
+- [aaPanel](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/aaPanel.md)
 
-- CyberPanel
+- [CyberPanel](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/CyberPanel.md)
 
 - VestaCP
