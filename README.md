@@ -11,12 +11,12 @@ Hoàn thành
 
 # Ngày 2
 ### [Các sản phẩm cơ bản](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/SanPhamCoBan.md#c%C3%A1c-s%E1%BA%A3n-ph%E1%BA%A9m-c%C6%A1-b%E1%BA%A3n)
-### [cPanel Part 1](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/cPanel_Part1.md)
+### [Training cPanel Part 1](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/cPanel_Part1.md)
 
 
 # Ngày 3
-### [cPanel Part 2](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/cPanel_Part%202.md)
-### [Các loại Control Panel](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/ControlPanel.md)
+### [Training cPanel Part 2](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/cPanel_Part%202.md)
+### [Training các loại control panel](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/ControlPanel.md)
 
 
 # Ngày 4
@@ -34,4 +34,5 @@ Hoàn thành
 
 ![image](https://github.com/user-attachments/assets/8c72a8bd-383e-4717-b112-42b6cfaf0ecc)
 
+### Training WHM
 
