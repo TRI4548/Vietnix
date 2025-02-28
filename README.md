@@ -23,3 +23,15 @@ Hoàn thành
 ### WHM Administration Certification Exam (CWA)
 
 ![image](https://github.com/user-attachments/assets/fc242919-ae41-4710-871a-fdc12973f47a)
+
+
+# Ngày 5
+### cPanel & WHM System Administrator I Certification Exam (CWSA-1)
+
+![image](https://github.com/user-attachments/assets/4f941324-6e3a-4675-8338-402b7987ee77)
+
+### cPanel & WHM System Administrator II Certification Exam (CWSA-2)
+
+![image](https://github.com/user-attachments/assets/8c72a8bd-383e-4717-b112-42b6cfaf0ecc)
+
+
