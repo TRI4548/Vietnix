@@ -39,7 +39,7 @@ Nguồn tham khảo:
 
 Nguồn tham khảo:
   - [Number of Processes (Vietnix)](https://vietnix.vn/number-of-processes-la-gi/)
-  - 
+
   - [Entry Processes (Vietnix)](https://vietnix.vn/entry-processes-la-gi/)
 
 
