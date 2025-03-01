@@ -38,6 +38,8 @@ find / -name "debug.log"
 
 - Các cờ trạng thái DNS
 
+  - Trạng thái tên miền tại Đơn vị Cấp phát tên miền (Registry)
+
 | Trạng thái | Ý nghĩa |
 |---|---|
 | OK / active	| Trạng thái thể hiện tên miền hoạt động bình thường sau khi đăng ký. |
@@ -58,5 +60,15 @@ find / -name "debug.log"
 | serverTransferProhibited |	Trạng thái không cho phép transfer tên miền. |
 | serverUpdateProhibited |	Trạng thái không cho phép cập nhật tên miền |
 | transferPeriod | Trạng thái cho phép sau khi tranfer tên miền thành thông thì nhà đăng ký mới có thể yêu cầu nhà cung cấp xóa tên miền |
+
+  - Trạng thái tên miền tại Đơn vị Quản lý (Nhà đăng ký) tên miền (Registrar)
+
+| Trạng thái |	Ý nghĩa |
+|---|---|
+| clientDeleteProhibited |	Trạng thái không cho phép xóa tên miền (Cấm hủy domain) |
+| clientHold |	Trạng thái suspend tên miền (Tạm ngừng tên miền) |
+| clientRenewProhibited |	Trạng thái không cho phép gia hạn tên miền. (Cấm Gia hạn tên miền) |
+| clientTransferProhibited |	Trạng thái không cho phép transfer tên miền (Cấm chuyển đổi nhà đăng ký) |
+| clientUpdateProhibited |	Trạng thái không cho phép cập nhật thông tin tên miền (Cấm cập nhật thông tin) |
 
 
