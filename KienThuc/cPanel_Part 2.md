@@ -1,5 +1,7 @@
 ## cPanel Part 2
 
+### Software
+
 - Wordpress Manager by Softaculous: đa dạng cài đặt các phần mềm mã nguồn mở hơn thay vì chỉ cài đặt và quản lý wordpress như WordPress Management
 
 - MultiPHP Manager (hỗ trợ bởi cPanel): tùy chọn các phiên bản PHP khác nhau cho từng website.
@@ -9,6 +11,37 @@
 - Setup Node.js App: hỗ trợ người dùng cài đặt các ứng dụng có mã nguồn nodejs
 
 - Cronjob: lập lịch chạy tự động
+
+### Câu hỏi tìm hiểu thêm
+- So sánh Disk Usage và Database Disk Usage ở mục Statistic trên cPanel
+
+ => Trả lời:
+  - Disk Usage thể hiện tổng dung lượng tất cả các file mà account đó sử dụng:
+    - Các tập tin mà chứa trong thư mục /home
+    - Các tập tin tồn tại trong các thư mục con ẩn
+    - Các mail được quản lý bởi Mailman
+    - Các tập tin mà thư mục /home của bạn không chứa (chưa hiểu, sẽ hỏi lại mentor sau)
+ 
+  - Database disk usage thể hiện dung lượng sử dụng của database của tài khoản đó. Tuy nhiên khi dung lượng của disk usage chạm mức quota thì vẫn có thể ghi thêm dữ liệu vào database
+
+Nguồn tham khảo:
+  - [Document cPanel](https://docs.cpanel.net/cpanel/files/disk-usage/)
+
+  - [Forum: Does the Disk Usage include MySQL usage?](https://support.cpanel.net/hc/en-us/articles/7232236971927-Does-the-Disk-Usage-include-MySQL-usage)
+
+
+- So sánh Number of Processes vs Entry Processes
+
+=> Trả lời:
+  - Number of Processes là chỉ số thể hiện số lượng tiến trình mà hosting có thể xử lý đồng thời tại một thời điểm
+
+  - Entry Processes là số lượng PHP script có thể chạy tại cùng một thời điểm
+
+Nguồn tham khảo:
+  - [Number of Processes (Vietnix)](https://vietnix.vn/number-of-processes-la-gi/)
+  - 
+  - [Entry Processes (Vietnix)](https://vietnix.vn/entry-processes-la-gi/)
+
 
 ## Lab
 ### Tạo Wordpress site với primary domain
