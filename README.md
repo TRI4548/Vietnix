@@ -34,5 +34,5 @@ Hoàn thành
 
 ![image](https://github.com/user-attachments/assets/8c72a8bd-383e-4717-b112-42b6cfaf0ecc)
 
-### Training WHM
+### [Training WHM](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/WHM.md)
 
