@@ -13,7 +13,8 @@
 - Cronjob: lập lịch chạy tự động
 
 ### Câu hỏi tìm hiểu thêm
-- So sánh Disk Usage và Database Disk Usage ở mục Statistic trên cPanel
+
+#### So sánh Disk Usage và Database Disk Usage ở mục Statistic trên cPanel
 
  => Trả lời:
   - Disk Usage thể hiện tổng dung lượng tất cả các file mà account đó sử dụng:
@@ -30,7 +31,7 @@ Nguồn tham khảo:
   - [Forum: Does the Disk Usage include MySQL usage?](https://support.cpanel.net/hc/en-us/articles/7232236971927-Does-the-Disk-Usage-include-MySQL-usage)
 
 
-- So sánh Number of Processes vs Entry Processes
+#### So sánh Number of Processes vs Entry Processes
 
 => Trả lời:
   - Number of Processes là chỉ số thể hiện số lượng tiến trình mà hosting có thể xử lý đồng thời tại một thời điểm
