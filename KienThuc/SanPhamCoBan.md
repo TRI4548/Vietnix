@@ -18,7 +18,7 @@
 
 ## Một số câu hỏi tìm hiểu
 
-- Cách dùng linux command để tìm kiếm error log và debug log
+### Cách dùng linux command để tìm kiếm error log và debug log
 
 ```
 find / -name "error.log"
@@ -36,9 +36,9 @@ find / -name "debug.log"
 # Xem tất cả các nhật ký hệ thống: journalctl
 ```
 
-- Các cờ trạng thái DNS
+### Các cờ trạng thái DNS
 
-  - Trạng thái tên miền tại Đơn vị Cấp phát tên miền (Registry)
+- Trạng thái tên miền tại Đơn vị Cấp phát tên miền (Registry)
 
 | Trạng thái | Ý nghĩa |
 |---|---|
@@ -61,7 +61,8 @@ find / -name "debug.log"
 | serverUpdateProhibited |	Trạng thái không cho phép cập nhật tên miền |
 | transferPeriod | Trạng thái cho phép sau khi tranfer tên miền thành thông thì nhà đăng ký mới có thể yêu cầu nhà cung cấp xóa tên miền |
 
-  - Trạng thái tên miền tại Đơn vị Quản lý (Nhà đăng ký) tên miền (Registrar)
+
+- Trạng thái tên miền tại Đơn vị Quản lý (Nhà đăng ký) tên miền (Registrar)
 
 | Trạng thái |	Ý nghĩa |
 |---|---|
