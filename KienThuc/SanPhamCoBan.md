@@ -27,7 +27,8 @@ find / -name "debug.log"
 
 # Xem log bằng các lệnh như cat, tail, less, head + file"
 
-# Ngoài ra tùy theo ứng dụng mà sẽ có cách lưu log khác nhau, ta dùng thêm google tra theo từ khóa "<tên phần mềm> log location"
+# Ngoài ra tùy theo ứng dụng mà sẽ có cách lưu log khác nhau, 
+ta dùng thêm google tra theo từ khóa "<tên phần mềm> log location"
 
 # Đa số log của Linux được lưu ở /var/log/
 
