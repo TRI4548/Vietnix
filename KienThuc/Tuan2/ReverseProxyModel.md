@@ -1,7 +1,7 @@
 ## Chuẩn bị
 - 1 VPS có cài docker, quản lý các container service bằng Portainer
 - Tên miền, nếu triển khai local thì chỉnh file host (Linux: /etc/hosts, Windows: C:\Windows\System32\drivers\etc\hosts)
-- Trỏ IP về VPS
+- Trỏ domain về IP của VPS
 
 ## Cài đặt
 
