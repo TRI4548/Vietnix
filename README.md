@@ -54,6 +54,6 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 3. [Chuyển dữ liệu Website](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/ChuyenDuLieuWebsite.md)
 4. [Tự setup toàn bộ các loại control panel (Đã thực hiện ở tuần 1)](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/ControlPanel.md)
 5. Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào
-6. Setup mô hình reverse proxy
+6. [Setup mô hình reverse proxy](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/ReverseProxyModel.md)
 7. Tiếp xúc Windows Server
 8. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
