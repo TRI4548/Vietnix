@@ -66,7 +66,7 @@ Chuẩn bị:
   
   ![image](https://github.com/user-attachments/assets/a7c518ab-d87f-46fa-bad0-d14556fc4021)
 
-  - Hoặc bằng cách upload lên thư mục chứa theme của WordPress (thường nằm ở File Manager của các Hosting Control Panel): /home/<user>/public_html/wp-content/themes
+  - Hoặc bằng cách upload lên thư mục chứa theme của WordPress (thường nằm ở File Manager của các Hosting Control Panel): /home/"<user>"/public_html/wp-content/themes
  
 - Plugin là một chương trình, ứng dụng bổ sung được tích hợp vào website WordPress, giúp mở rộng chức năng hiện có hoặc thêm một tính năng mới cho website.
 
@@ -74,6 +74,6 @@ Chuẩn bị:
  
   ![image](https://github.com/user-attachments/assets/cc25f9d7-f9bf-4c5d-bd6a-295b42075015)
 
-  - Hoặc bằng cách upload lên thư mục chứa plugin của WordPress (thường nằm ở File Manager của các Hosting Control Panel): /home/<user>/public_html/wp-content/plugins
+  - Hoặc bằng cách upload lên thư mục chứa plugin của WordPress (thường nằm ở File Manager của các Hosting Control Panel): /home/"<user>"/public_html/wp-content/plugins
     Rồi lên giao diện WordPress để Activate
 
