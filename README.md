@@ -53,7 +53,9 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 2. [Setup Website Wordpress, cài Plugins, Kích hoạt license](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/SetupWordpress.md)
 3. [Chuyển dữ liệu Website](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/ChuyenDuLieuWebsite.md)
 4. [Tự setup toàn bộ các loại control panel (Đã thực hiện ở tuần 1)](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/ControlPanel.md)
-5. Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào
-6. [Setup mô hình reverse proxy](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/ReverseProxyModel.md)
-7. Tiếp xúc Windows Server
-8. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
+5. [Setup mô hình reverse proxy](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/ReverseProxyModel.md)
+
+## Ngày 2
+1. [Tiếp xúc Windows Server](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/WindowsServer.md)
+2. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
+3. Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào
