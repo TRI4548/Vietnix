@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/76cef19f-3702-44d1-af5e-9c34a950261b)## Thực hiện allow/block port, allow ip trên window fw (Demo allow ssh tới windows server)
+## Thực hiện allow/block port, allow ip trên window fw (Demo allow ssh tới windows server)
 
 1. Cài OpenSSH server trên windows server 2022: 
 
@@ -122,10 +122,20 @@ Check IP của Windows Server
 
       ![image](https://github.com/user-attachments/assets/4f9f7e1e-5658-47a0-9ae3-8585c1f6674d)
 
+      ![image](https://github.com/user-attachments/assets/c910244a-05f6-44fd-a424-2dc426c93664)
 
 
-  - Cài đặt plugin
+  - Cài đặt plugin: WordPress Home >> Plugin >> Add new plugin hoặc đường dẫn: docroot/wp-content/plugins
   - Cài đặt SSL
+    - Chuẩn bị file cert định dạng .pfx, nếu đã có file .pem thì có thể dùng tool để chuyển đổi
+    - Import vảo IIS: IIS Manager >> Server Certificates >> Import
+
+    ![image](https://github.com/user-attachments/assets/dc63eb12-df07-4595-9c45-d2b92988e8f4)
+
+    - Cấu hình website với SSL: IIS Manager >> Site cần cấu hình >> Edit Binding...
+   
+    ![image](https://github.com/user-attachments/assets/c8ecfc93-0f31-40d5-9c96-7f4a45a02a88)
+
  
 - SQL Server: 2008, 2012, 2014, 2016, 2019, 2022 các phiên bản: Standard và Datacenter
 
