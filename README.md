@@ -57,5 +57,8 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 
 ## Ngày 2
 1. [Tiếp xúc Windows Server](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/WindowsServer.md)
+
+## Ngày 3
+1. [Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/Mail_FTP.md)
 2. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
-3. Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào
+
