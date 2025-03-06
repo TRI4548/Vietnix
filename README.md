@@ -60,5 +60,10 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 
 ## Ngày 3
 1. [Setup mail account, FTP account thủ công không dùng bất kỳ control panel nào](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/Mail_FTP.md)
-2. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
+2. [Training email](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan2/Email.md)
 
+## Ngày 4
+1. Ôn tập lại các kiến thức cPanel WHM và Các loại control panel
+
+## Ngày 5
+1. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
