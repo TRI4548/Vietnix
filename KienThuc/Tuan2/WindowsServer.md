@@ -139,3 +139,6 @@ Check IP của Windows Server
  
 - SQL Server: 2008, 2012, 2014, 2016, 2019, 2022 các phiên bản: Standard và Datacenter
 
+![ảnh](https://github.com/user-attachments/assets/afbc61d4-71d4-436c-91ed-4fa454e5a1a9)
+
+Đã cài đặt thành công SQL Server 2022 trên Windows Server 2022
