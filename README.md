@@ -66,4 +66,7 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 1. Ôn tập lại các kiến thức cPanel WHM và Các loại control panel
 
 ## Ngày 5
-1. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw
+1. Ôn tập lại các kiến thức về email
+
+## Ngày 6
+1. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw (done)
