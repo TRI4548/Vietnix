@@ -20,7 +20,7 @@ Công dụng:
 |---|---|
 | APACHE là 1 web server	| NGINX ngoài khả năng làm web server còn có thể làm reverse proxy ([Mục 1](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/))|
 | APACHE không thể chịu tải tốt bằng NGINX khi có lượng truy cập lơn | NGINX có thể xử lý hơn 10000 kết nối đồng thời mà chỉ tiêu tốn khoảng 2.5MB bộ nhớ ([Nguồn](https://en.wikipedia.org/wiki/Nginx#HTTP_proxy_and_Web_server_features))|
-| Apache có hiệu suất cung cấp static content thấp nginx | NGINX có hiệu suất cung cấp static content nhanh hơn APACHE gấp 2 lần do có thể xử lý nhiều kết nối đồng thời ([Mục 10](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/)) |
+| Apache có hiệu suất cung cấp static content thấp hơn NGINX | NGINX có hiệu suất cung cấp static content nhanh hơn APACHE gấp 2 lần do có thể xử lý nhiều kết nối đồng thời ([Mục 10](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/)) |
 | Không rõ | NGINX có thể dùng làm mail proxy ([Nguồn](https://en.wikipedia.org/wiki/Nginx?utm_source=chatgpt.com#Mail_proxy_features)) |
 | APACHE có lợi thế hơn về việc thêm module ngoài do được cung cấp Dynamic Module từ rất lâu. | Vào năm 2016, NGINX mới bắt đầu hỗ trợ cho Dynamic Module. ([Nguồn](https://viblo.asia/p/tim-hieu-tong-quan-ve-nginx-63vKjOExZ2R#_5-so-sanh-nginx-va-apache-4)) |
 | Có tính bảo mật kém hơn khi được so sánh với NGINX | Bảo mật tốt hơn do có codebase nhỏ hơn ([Mục 11](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/))|
