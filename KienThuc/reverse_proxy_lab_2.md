@@ -1,14 +1,14 @@
-Mô hình:
+# Mô hình:
 
 ![ảnh](https://github.com/user-attachments/assets/221270cc-04c7-4836-9ea4-572d332d2650)
 
-Mục tiêu: tạo 2 site wp.tringuyen.space và laravel.tringuyen.space
+# Mục tiêu: tạo 2 site wp.tringuyen.space và laravel.tringuyen.space
 - Tạo NGINX reverse proxy để phục vụ cho việc tải nhanh chóng các static content đến người dùng, không phải thông qua web server apache 
 - Web server APACHE chỉ thực hiện việc yêu cầu các lệnh truy vấn ngôn ngữ PHP
 
 Với Nginx làm reverse proxy ở phía trước thì người dùng nhập wp.tringuyen.space sẽ hiển thị "Site 1" còn laravel.tringuyen.space sẽ hiển thị "Site 2"
 
-Các bước thực hiện:
+# Các bước thực hiện:
 
 1. Cài httpd (APACHE) và cấu hình cho APACHE từ port 80 sang 8080 để port 80 cho NGINX chạy
 
@@ -327,6 +327,11 @@ certbot --nginx -d laravel.tringuyen.space
 
 14. Kiểm tra 2 site có SSL hay chưa
 
+![ảnh](https://github.com/user-attachments/assets/9ecce58c-4b0f-44bc-a820-07b4530dbacd)
+
+
+![ảnh](https://github.com/user-attachments/assets/7648ecfa-ad05-4e7c-903e-7dfa8b83324c)
+
 
 15. Test dịch vụ thông qua nginx log và apache log
 
@@ -346,8 +351,29 @@ Kết quả access log của NGINX
 
 ![ảnh](https://github.com/user-attachments/assets/a2297c4b-4c5e-4768-a855-bcc4470b4be3)
 
+=> Ta thấy được file hình ảnh đã được NGINX serve tới người dùng, APACHE chỉ thực hiện các truy vấn php, giúp giảm tải server
 
 
+16. Cấu hình caching ở NGINX
 
+- Khai báo nơi lưu Cache Zone trong file cấu hình nginx
 
+```
+nano /etc/nginx/nginx.conf
 
+# Thêm dòng này trong block http
+
+proxy_cache_path /var/cache/nginx levels=1:2 keys_zone=my_cache:10m max_size=1g inactive=60m use_temp_path=off;
+```
+
+- Apply nội dung sau đây vào site wp.tringuyen.space trong NGINX block trong mục location /
+
+```
+    proxy_cache my_cache;
+    proxy_cache_valid 200 1h;  # Cache 200 responses for 1 hour
+```
+
+# Các nguồn tham khảo:
+1. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-web-server-and-reverse-proxy-for-apache-on-one-ubuntu-18-04-server#step-10-blocking-direct-access-to-apache-optional)
+2. [dev.to](https://dev.to/imsushant12/serving-static-content-with-nginx-26ih)
+3. [xtom.com](https://xtom.com/blog/how-to-setup-nginx-apache-reverse-proxy-almalinux-rocky-linux/)
