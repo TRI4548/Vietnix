@@ -70,3 +70,6 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 
 ## Ngày 6
 1. Thực hành nâng cấp/hạ cấp các dịch vụ: hosting/vps/fw (done)
+
+### Tuần 3
+[1. Thực hiện lại lab reverse proxy thuần lệnh](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/reverse_proxy_lab_2.md)
