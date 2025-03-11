@@ -337,7 +337,7 @@ certbot --nginx -d laravel.tringuyen.space
 # Thực hiện tải 1 file vào thư mục docroot của site wp.tringuyen.space và thử truy cập
 sudo wget https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1280px-Nginx_logo.svg.png -O /var/www/wp.tringuyen.space/wordpress/nginx-logo.png
 
-https://wp.tringuyen.space/nginx-logo.png
+# Truy cập https://wp.tringuyen.space/nginx-logo.png
 ```
 
 Kết quả access log của APACHE
