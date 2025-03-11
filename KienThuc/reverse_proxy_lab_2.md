@@ -6,7 +6,7 @@
 - Với NGINX reverse proxy ở frontend để phục vụ cho việc tải nhanh chóng các static content đến người dùng, không phải thông qua web server apache 
 - Web server APACHE ở backend chỉ thực hiện việc yêu cầu các lệnh truy vấn ngôn ngữ PHP
 
-# Các bước thực hiện:
+# Các bước thực hiện (trên AlmaLinux 9):
 
 1. Cài httpd (APACHE) và cấu hình cho APACHE từ port 80 sang 8080 để port 80 cho NGINX chạy
 
