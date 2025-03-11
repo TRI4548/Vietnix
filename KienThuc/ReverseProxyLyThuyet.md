@@ -21,6 +21,19 @@ Công dụng:
 | APACHE là 1 web server	| NGINX ngoài khả năng làm web server còn có thể làm reverse proxy ([Mục 1](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/))|
 | APACHE không thể chịu tải tốt bằng NGINX khi có lượng truy cập lơn | NGINX có thể xử lý hơn 10000 kết nối đồng thời mà chỉ tiêu tốn khoảng 2.5MB bộ nhớ ([Nguồn](https://en.wikipedia.org/wiki/Nginx#HTTP_proxy_and_Web_server_features))|
 | Apache có hiệu suất cung cấp static content thấp nginx | NGINX có hiệu suất cung cấp static content nhanh hơn APACHE gấp 2 lần do có thể xử lý nhiều kết nối đồng thời ([Mục 10](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/)) |
-| ? | NGINX có thể dùng làm mail proxy ([Nguồn](https://en.wikipedia.org/wiki/Nginx?utm_source=chatgpt.com#Mail_proxy_features)) |
-| ? | NGINX có thể thêm module ngoài dễ hơn vì có Dynamic Module Loading thay vì phải build lai source (Nguồn) |
-| ? | URL rewriting & redirection ([Nguồn](https://en.wikipedia.org/w/index.php?title=Nginx&action=edit&section=3)) |
+| Không rõ | NGINX có thể dùng làm mail proxy ([Nguồn](https://en.wikipedia.org/wiki/Nginx?utm_source=chatgpt.com#Mail_proxy_features)) |
+| APACHE có lợi thế hơn về việc thêm module ngoài do được cung cấp Dynamic Module từ rất lâu. | Vào năm 2016, NGINX mới bắt đầu hỗ trợ cho Dynamic Module. ([Nguồn](https://viblo.asia/p/tim-hieu-tong-quan-ve-nginx-63vKjOExZ2R#_5-so-sanh-nginx-va-apache-4)) |
+| Có tính bảo mật kém hơn khi được so sánh với NGINX | Bảo mật tốt hơn do có codebase nhỏ hơn ([Mục 11](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/))|
+| Cấu hình phức tạp hơn NGINX | Cấu hình dễ hơn so với APACHE ([Mục 13](https://www.geeksforgeeks.org/difference-between-apache-and-nginx/)) |
+
+# Khi nào chọn APACHE và khi nào chọn NGINX
+
+## Chọn APACHE khi
+- Triển khai hệ thống hosting, người dùng có thể chỉnh sửa để chạy theo source của họ thông qua .htaccess trong phân vùng hosting của họ
+- Khi cần sự linh hoạt của các modul
+
+## Chọn NGINX khi
+- Cần xử lí nhiều nội dung tĩnh hơn
+- Server có lưu lượng truy cập lớn
+
+[Nguồn](https://cloudzone.vn/so-sanh-apache-va-nginx/#Khi_nao_chon_Apache_hay_Nginx)
