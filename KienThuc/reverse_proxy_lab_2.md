@@ -231,6 +231,8 @@ server {
     # Khai báo chỗ này để NGINX phục vụ các static content đến người dùng
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
         root /var/www/wp.tringuyen.space;
+        index index.html index.htm;
+        try_files $uri $uri/ =404;  # Serve 404 if file not found
     }
 
     # Khai báo chỗ này để xử lý các request khác đến APACHE
@@ -263,6 +265,8 @@ server {
     # Khai báo chỗ này để NGINX phục vụ các static content đến người dùng
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
         root /var/www/laravel.tringuyen.space;
+        index index.html index.htm;
+        try_files $uri $uri/ =404;  # Serve 404 if file not found
     }
 
     # Khai báo chỗ này để xử lý các request khác đến APACHE
@@ -334,11 +338,14 @@ https://wp.tringuyen.space/nginx-logo.png
 ```
 
 Kết quả access log của APACHE
-![ảnh](https://github.com/user-attachments/assets/5f92e350-f667-431a-be29-e83d18c2c01e)
+
+![ảnh](https://github.com/user-attachments/assets/0238299c-d62a-4066-bf2e-0f79c871e077)
 
 
 Kết quả access log của NGINX
-![ảnh](https://github.com/user-attachments/assets/1b693efe-0369-4265-ac27-82e8067eae46)
+
+![ảnh](https://github.com/user-attachments/assets/a2297c4b-4c5e-4768-a855-bcc4470b4be3)
+
 
 
 
