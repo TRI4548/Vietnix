@@ -3,10 +3,8 @@
 ![ảnh](https://github.com/user-attachments/assets/221270cc-04c7-4836-9ea4-572d332d2650)
 
 # Mục tiêu: tạo 2 site wp.tringuyen.space và laravel.tringuyen.space
-- Tạo NGINX reverse proxy để phục vụ cho việc tải nhanh chóng các static content đến người dùng, không phải thông qua web server apache 
-- Web server APACHE chỉ thực hiện việc yêu cầu các lệnh truy vấn ngôn ngữ PHP
-
-Với Nginx làm reverse proxy ở phía trước thì người dùng nhập wp.tringuyen.space sẽ hiển thị "Site 1" còn laravel.tringuyen.space sẽ hiển thị "Site 2"
+- Với NGINX reverse proxy ở frontend để phục vụ cho việc tải nhanh chóng các static content đến người dùng, không phải thông qua web server apache 
+- Web server APACHE ở backend chỉ thực hiện việc yêu cầu các lệnh truy vấn ngôn ngữ PHP
 
 # Các bước thực hiện:
 
