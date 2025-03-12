@@ -1,58 +1,57 @@
 
 # SSL
 
-- SSL là gì ?
+## SSL là gì ?
 
 SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đường truyền giữa trình duyệt và web server
 => Đảm bảo không bị đọc trộm, cung cấp tính toàn vẹn dữ liệu
 
-- Cách thức hoạt động:
+## Cách thức hoạt động:
 
-  1. Xin phép kết nối an toàn
-  2. Chứng thực máy chủ
-  3. Xác thực máy khách (nếu cần)
-  4. Chia sẻ khóa bí mật
-  5. Bảo mật kết nối
-  6. Truyền dữ liệu an toàn
+  B1 Xin phép kết nối an toàn
+  B2 Chứng thực máy chủ
+  B3 Xác thực máy khách (nếu cần)
+  B4 Chia sẻ khóa bí mật
+  B5 Bảo mật kết nối
+  B6 Truyền dữ liệu an toàn
  
-- Các loại chứng chỉ: DV, OV, EV, ngoài ra còn có Wildcard SSL, Subject Alternative Names – SANs SSL
+## Các loại chứng chỉ: DV, OV, EV, ngoài ra còn có Wildcard SSL, Subject Alternative Names – SANs SSL
 
-- Có bao nhiêu cách chứng thực SSL ? 2 cách
+## Có bao nhiêu cách chứng thực SSL ? 2 cách
 
  - One-way: đang tìm hiểu
  - Two-way: đang tìm hiểu
 
-- CSR file dùng làm gì trong quá trình tạo SSL
+## CSR file dùng làm gì trong quá trình tạo SSL
 
-CSR file dùng làm gì trong quá trình tạo SSL? là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL để xác nhận.
+## CSR file dùng làm gì trong quá trình tạo SSL? là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL để xác nhận.
 
-Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
+## Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
-- Pem file là gì ?
+## Pem file là gì ?
 
 File PEM (Privacy Enhanced Mail) là một định dạng tệp được sử dụng để lưu trữ và truyền tải các chứng chỉ, khóa riêng tư, và các dữ liệu bảo mật khác trong các hệ thống mã hóa, được mã hóa bằng base64
 [Nguồn](https://tenten.vn/tin-tuc/file-pem-la-gi/)
 
-- Private key ssl là gì ?
+## Private key ssl là gì ?
 
 Là file mã hoá được sinh ra cùng lúc khi tạo CSR.
 
-- PFX file là gì ? Cách chuyển từ file crt file sang PFX file.
+## PFX file là gì ? Cách chuyển từ file crt file sang PFX file.
 
-FX file (Personal Exchange Information) : là một file chữ ký số chứa bao gồm public và private key được sử dụng để chứng thực cho IIS trên Windows. 
+PFX file (Personal Exchange Information) : là một file chữ ký số chứa bao gồm public và private key được sử dụng để chứng thực cho IIS trên Windows. 
 [Cách convert qua file pfx](https://www.sslshopper.com/ssl-converter.html
 (https://kb.pavietnam.vn/tao-file-pfx-de-import-vao-iis.html)
 
 # Domain
 
-- Domain là gì ?
+## Domain là gì ?
 
 Domain, hay còn được gọi là tên miền, chính là địa chỉ website của bạn trên Internet.
-[Nguồn](https://vietnix.vn/domain-la-gi/)
 
-- Các trạng thái của domain
+## Các trạng thái của domain
 
-  - Trạng thái tên miền tại Đơn vị Cấp phát tên miền (Registry)
+- Trạng thái tên miền tại Đơn vị Cấp phát tên miền (Registry)
 
 | Trạng thái | Ý nghĩa |
 |---|---|
@@ -76,7 +75,7 @@ Domain, hay còn được gọi là tên miền, chính là địa chỉ website
 | transferPeriod | Trạng thái cho phép sau khi tranfer tên miền thành thông thì nhà đăng ký mới có thể yêu cầu nhà cung cấp xóa tên miền |
 
 
-  - Trạng thái tên miền tại Đơn vị Quản lý (Nhà đăng ký) tên miền (Registrar)
+- Trạng thái tên miền tại Đơn vị Quản lý (Nhà đăng ký) tên miền (Registrar)
 
 | Trạng thái |	Ý nghĩa |
 |---|---|
@@ -87,23 +86,22 @@ Domain, hay còn được gọi là tên miền, chính là địa chỉ website
 | clientUpdateProhibited |	Trạng thái không cho phép cập nhật thông tin tên miền (Cấm cập nhật thông tin) |
 
 
-- Subdomain là gì?
+## Subdomain là gì?
 
 Là phần mở rộng, phần bổ sung xuất hiện trước của tên miền chính. Subdomain là một phần tách ra từ domain và hoạt động như một website bình thường
 
-
-- Virtual Hosts là gì?
+## Virtual Hosts là gì?
 
 Là một tính năng trong web server và cũng là một phương thức lưu trữ, cho phép nhiều trang web hoặc tên miền hoạt động trên cùng một máy chủ vật lý hoặc một địa chỉ IP duy nhất
 
 # Mail Server
 
-- Tìm hiểu MX Record
+## Tìm hiểu MX Record
 
 MX Record hay còn gọi là bản ghi MX (Mail Exchange) là một loại bản ghi DNS giúp điều hướng email đến đúng máy chủ email
 [Nguồn](https://vinahost.vn/mx-record-la-gi/)
 
-- Tìm hiểu DKIM, SPF, PTR ([Nguồn](https://vietnix.vn/cau-hinh-dkim-va-spf/#spf-la-gi))
+## Tìm hiểu DKIM, SPF, PTR ([Nguồn](https://vietnix.vn/cau-hinh-dkim-va-spf/#spf-la-gi))
 
   - DKIM là viết tắt của DomainKeys Identified Mail – một phương thức giúp xác nhận Email thông qua chữ ký số giúp tránh email giả mạo.
 
@@ -114,11 +112,11 @@ MX Record hay còn gọi là bản ghi MX (Mail Exchange) là một loại bản
 
 # DNS
 
-- DNS là gì ? [Nguồn](https://vietnix.vn/dns-la-gi/)
+## DNS là gì ? [Nguồn](https://vietnix.vn/dns-la-gi/)
 
 DNS viết tắt của Domain Name System có nghĩa là hệ thống phân giải tên miền. DNS là hệ thống cho phép thiết lập tương ứng giữa địa chỉ IP và tên miền trên Internet.
 
- - Các loại recored DNS
+## Các loại recored DNS
 
    - A: phân giải tên miền thành IPv4
    - AAAA: phân giải tên miền thành IPv6
@@ -128,8 +126,8 @@ DNS viết tắt của Domain Name System có nghĩa là hệ thống phân gi�
    - SRV: dùng để xác định chính xác dịch vụ nào đang chạy Port nào
    - NS: chỉ định Name Server cho từng tên miền phụ và bên cạnh đó có thể tạo tên Name Server, TTL hay host mới.
 
-- Nguyên tắc làm việc của DNS
+## Nguyên tắc làm việc của DNS
 
 ![image](https://github.com/user-attachments/assets/112db941-bd11-47bd-8802-06e0b15aea97)
 
-- Cách phân giải địa chỉ DNS
+## Cách phân giải địa chỉ DNS
