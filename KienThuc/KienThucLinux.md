@@ -11,6 +11,14 @@ TTL (time to live): là thời gian packet được lưu hành, khi đi qua mỗ
 
 time: thời gian phản hồi trung bình hay độ  giữa máy gửi lệnh ping và máy nhận
 
+### So sánh hping3 và ping
+
+- Ping: Chỉ sử dụng giao thức ICMP
+- hping3: Có thể gửi nhiều loại gói tin khác nhau (TCP, UDP, ICMP, RAW-IP)
+
+![image](https://github.com/user-attachments/assets/9d84cc03-9151-4165-a971-8dcdd01748ec)
+
+
 ## SSH
 
 - SSH dùng password
