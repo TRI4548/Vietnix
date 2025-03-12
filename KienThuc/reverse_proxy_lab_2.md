@@ -50,7 +50,7 @@ nano /etc/httpd/conf.d/wp.tringuyen.space.conf
 </VirtualHost>
 
 -------------------------------------------------------------------------------
-nano /etc/httpd/conf.d/wp.tringuyen.space.conf
+nano /etc/httpd/conf.d/laravel.tringuyen.space.conf
 
 # Nội dung
 
