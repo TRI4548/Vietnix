@@ -28,6 +28,10 @@ CSR file dùng làm gì trong quá trình tạo SSL? là 1 đoạn text chứa t
 
 #### Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
+![ảnh](https://github.com/user-attachments/assets/d4f94fda-46e5-4db9-a746-554be2ff3d50)
+
+![ảnh](https://github.com/user-attachments/assets/10cec462-a757-4e9e-8c55-511a51375723)
+
 #### Pem file là gì ?
 
 File PEM (Privacy Enhanced Mail) là một định dạng tệp được sử dụng để lưu trữ và truyền tải các chứng chỉ, khóa riêng tư, và các dữ liệu bảo mật khác trong các hệ thống mã hóa, được mã hóa bằng base64
