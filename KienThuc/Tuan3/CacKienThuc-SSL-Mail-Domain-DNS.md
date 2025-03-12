@@ -19,8 +19,8 @@ SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đư�
 
 #### Có bao nhiêu cách chứng thực SSL ? 2 cách
 
- - One-way
- - Two-way
+ - One-way: Máy chủ được yêu cầu trình bày chứng chỉ cho máy khách nhưng máy khách không bắt buộc phải trình bày chứng chỉ cho máy chủ
+ - Two-way: Máy chủ và máy khách đều phải xác thực chứng chỉ của nhau để chứng mình danh tính
 
 #### CSR file dùng làm gì trong quá trình tạo SSL
 
