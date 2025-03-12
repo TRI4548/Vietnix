@@ -116,7 +116,7 @@ MX Record hay còn gọi là bản ghi MX (Mail Exchange) là một loại bản
 
 DNS viết tắt của Domain Name System có nghĩa là hệ thống phân giải tên miền. DNS là hệ thống cho phép thiết lập tương ứng giữa địa chỉ IP và tên miền trên Internet.
 
-#### Các loại recored DNS
+#### Các loại record DNS
 
    - A: phân giải tên miền thành IPv4
    - AAAA: phân giải tên miền thành IPv6
