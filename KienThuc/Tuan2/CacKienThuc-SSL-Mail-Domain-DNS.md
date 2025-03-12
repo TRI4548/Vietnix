@@ -4,15 +4,27 @@
 - SSL là gì ?
 
 SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đường truyền giữa trình duyệt và web server
-[Nguồn](https://vietnix.vn/ssl-la-gi/#cac-thanh-phan-cua-ssl)
+=> Đảm bảo không bị đọc trộm, cung cấp tính toàn vẹn dữ liệu
 
-- Có bao nhiêu cách chứng thực SSL ?
+- Cách thức hoạt động:
 
+  1. Xin phép kết nối an toàn
+  2. Chứng thực máy chủ
+  3. Xác thực máy khách (nếu cần)
+  4. Chia sẻ khóa bí mật
+  5. Bảo mật kết nối
+  6. Truyền dữ liệu an toàn
+ 
+- Các loại chứng chỉ: DV, OV, EV, ngoài ra còn có Wildcard SSL, Subject Alternative Names – SANs SSL
+
+- Có bao nhiêu cách chứng thực SSL ? 2 cách
+
+ - One-way: đang tìm hiểu
+ - Two-way: đang tìm hiểu
 
 - CSR file dùng làm gì trong quá trình tạo SSL
 
 CSR file dùng làm gì trong quá trình tạo SSL? là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL để xác nhận.
-[Nguồn](https://vietnix.vn/ssl-la-gi/#cac-thanh-phan-cua-ssl)
 
 Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
@@ -24,15 +36,12 @@ File PEM (Privacy Enhanced Mail) là một định dạng tệp được sử d�
 - Private key ssl là gì ?
 
 Là file mã hoá được sinh ra cùng lúc khi tạo CSR.
-Nguồn
 
 - PFX file là gì ? Cách chuyển từ file crt file sang PFX file.
 
 FX file (Personal Exchange Information) : là một file chữ ký số chứa bao gồm public và private key được sử dụng để chứng thực cho IIS trên Windows. 
 [Cách convert qua file pfx](https://www.sslshopper.com/ssl-converter.html
 (https://kb.pavietnam.vn/tao-file-pfx-de-import-vao-iis.html)
-
-Nguồn
 
 # Domain
 
@@ -81,12 +90,11 @@ Domain, hay còn được gọi là tên miền, chính là địa chỉ website
 - Subdomain là gì?
 
 Là phần mở rộng, phần bổ sung xuất hiện trước của tên miền chính. Subdomain là một phần tách ra từ domain và hoạt động như một website bình thường
-[Nguồn](https://vietnix.vn/subdomain-la-gi/)
+
 
 - Virtual Hosts là gì?
 
 Là một tính năng trong web server và cũng là một phương thức lưu trữ, cho phép nhiều trang web hoặc tên miền hoạt động trên cùng một máy chủ vật lý hoặc một địa chỉ IP duy nhất
-[Nguồn](https://vietnix.vn/virtual-hosts/)
 
 # Mail Server
 
