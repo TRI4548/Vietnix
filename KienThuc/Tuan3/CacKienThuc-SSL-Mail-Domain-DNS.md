@@ -8,12 +8,12 @@ SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đư�
 
 #### Cách thức hoạt động:
 
-  B1 Xin phép kết nối an toàn
-  B2 Chứng thực máy chủ
-  B3 Xác thực máy khách (nếu cần)
-  B4 Chia sẻ khóa bí mật
-  B5 Bảo mật kết nối
-  B6 Truyền dữ liệu an toàn
+- B1 Xin phép kết nối an toàn
+- B2 Chứng thực máy chủ
+- B3 Xác thực máy khách (nếu cần)
+- B4 Chia sẻ khóa bí mật
+- B5 Bảo mật kết nối
+- B6 Truyền dữ liệu an toàn
  
 #### Các loại chứng chỉ: DV, OV, EV, ngoài ra còn có Wildcard SSL, Subject Alternative Names – SANs SSL
 
