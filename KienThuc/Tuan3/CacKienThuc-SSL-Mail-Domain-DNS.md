@@ -19,8 +19,8 @@ SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đư�
 
 #### Có bao nhiêu cách chứng thực SSL ? 2 cách
 
- - One-way: đang tìm hiểu
- - Two-way: đang tìm hiểu
+ - One-way
+ - Two-way
 
 #### CSR file dùng làm gì trong quá trình tạo SSL
 
@@ -126,8 +126,6 @@ DNS viết tắt của Domain Name System có nghĩa là hệ thống phân gi�
    - SRV: dùng để xác định chính xác dịch vụ nào đang chạy Port nào
    - NS: chỉ định Name Server cho từng tên miền phụ và bên cạnh đó có thể tạo tên Name Server, TTL hay host mới.
 
-#### Nguyên tắc làm việc của DNS
+#### Cách phân giải địa chỉ DNS
 
 ![image](https://github.com/user-attachments/assets/112db941-bd11-47bd-8802-06e0b15aea97)
-
-#### Cách phân giải địa chỉ DNS
