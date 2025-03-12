@@ -22,9 +22,9 @@ SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đư�
  - One-way: Máy chủ được yêu cầu trình bày chứng chỉ cho máy khách nhưng máy khách không bắt buộc phải trình bày chứng chỉ cho máy chủ
  - Two-way: Máy chủ và máy khách đều phải xác thực chứng chỉ của nhau để chứng mình danh tính
 
-#### CSR file dùng làm gì trong quá trình tạo SSL
+#### CSR file dùng làm gì trong quá trình tạo SSL?
 
-CSR file dùng làm gì trong quá trình tạo SSL? là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL để xác nhận.
+Là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL để xác nhận.
 
 #### Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
