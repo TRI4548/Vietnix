@@ -2,11 +2,10 @@
 
 ![image](https://github.com/user-attachments/assets/62838ddb-a478-43be-86d3-2a4580a24e9a)
 
-**Giải thích: 
-- a
-- b
-- c
-- d**
+Giải thích: 
+- Vietnix.vn có IP là 103.90.224.90
+- Số lượng byte gửi và nhận lại là 64 byte
+- icmp_seq là số thứ tự gói tin
 
 TTL (time to live): là thời gian packet được lưu hành, khi đi qua mỗi router, TTL sẽ trừ 1. Khi TTL = 0, gói tin sẽ bị loại bỏ và một thông báo ICMP sẽ được gửi lại cho người gửi
 
@@ -18,9 +17,12 @@ time: thời gian phản hồi trung bình hay độ  giữa máy gửi lệnh p
 
 ![image](https://github.com/user-attachments/assets/22282248-e551-4171-81f9-0fae4f3f474d)
 
-**- SSH dùng key
+- SSH dùng key
 
-nhớ bổ sung**
+  - B1: Tạo RSA pair key
+  - B2: Lưu key
+  - B3: Sao chép đến server cần xác thực thông qua key
+  - B4: Login server => vô hiệu hóa root login và cấu hình chỉ cho login thông qua key
 
 - Đổi port SSH:
   - Chỉnh file /etc/ssh/sshd_config, loại bỏ comment và khai báo port muốn sử dụng => sau đó Save lại
@@ -45,13 +47,17 @@ nhớ bổ sung**
 
 **- rsync increamental**
 
-## cat command: xem nội dung trong file
-**
-- cat nội dung 1 file: 
+## cat command: tạo một hoặc nhiều file, xem nội dung file, nối file và chuyển hướng đầu ra trong terminal hoặc file
 
-- cat dòng thứ <n> trong file: 
+- cat nội dung 1 file: cat path/to/file
 
-- cat nhiều dòng vào 1 file bằng EOF: **
+- cat dòng thứ <n> trong file: cat text.txt | head -n 5 | tail -n 1
+  => Kết hợp với lệnh head để lấy 5 dòng đầu tiên sau khi cat, sau đó lấy dòng cuối cùng bằng lệnh tail
+
+- cat nhiều dòng vào 1 file bằng EOF: cat >> ten_file << EOF
+
+![image](https://github.com/user-attachments/assets/b5cfe8df-3c6e-4df1-9115-6f2d41d04580)
+
 
 ## echo command: in text
 
@@ -69,37 +75,39 @@ nhớ bổ sung**
 
 ## sed command: Dùng sed để find and replace một string trong file
 
-```
-echo Mango,Banana >> text.txt
+- Dùng sed để find and replace một string trong file: sed 's/Mango/Kiwi/' text.txt
 
-cat text.txt
-
-sed 's/Mango/Kiwi/' text.txt
-
-cat text.txt
-```
+- Dùng sed để find and replace toàn bộ string trong file: 's/Kiwi/Orange/g' text.txt
 
 ## traceroute/tracert command: Sau khi traceroute xong giải thích chi tiết kết quả trả về
 
 ![image](https://github.com/user-attachments/assets/73a32a5d-4666-40dc-bea1-2c60404f8ac0)
 
-Giải thích:
-- a
-- b
-- c
+Giải thích: lộ trình của gói tin từ máy local đến vietnix.vn đi qua 11 hop, maximum cho quá trình này là 30 hop và kích thước gói là 60 byte
+- Hop 1: ra khỏi mạng nội bộ
+- Hop 2: đi đến router Viettel có IP là 125.235.251.181 với tgian trung bình là 9ms
+- Hop 3: đi đến router Viettel có IP là 10.255.38.229 với tgian trung bình là 10ms
+- Hop 4: thiết bị không phản hồi, có thể vì thiết bị này được cấu hình để không gửi packet ICMP hoặc thời gian phản hồi quá chậm.
+- Hop 5: đi đến router cuối cùng của Viettel có IP là 27.68.236.240 với tgian trung bình là 9ms
+- Hop 6: đi đến router của VNPT có IP là 203.113.187.98 với tgian trung bình là 10ms
+- Hop 7: đi đến router của VNPT có IP là 113.171.45.66 với tgian trung bình là 6ms
+- Hop 8: đi đến router của VNPT có IP là 113.171.49.2 với tgian trung bình là 7ms
+- Hop 9: đi đến router có IP là 172.16.34.178 với tgian trung bình là 6ms
+- Hop 10: đi đến router có IP là 172.18.19.21 với tgian trung bình là 5ms
+- Hop 11: đi đến trang web của Vietnix với IP là 103.90.224.90 với tgian trung bình là 8ms
 
 
 ## netstat command: hiển thị các thông tin liên quan đến kết nối mạng
 
-- don't resolve hostname: netstat --numeric-hosts
+- Hiển thị địa chỉ IP thay vì tên miền: netstat --numeric-hosts
 
-- don't resolve portname: netstat --numeric-ports
+- Hiển thị số cổng mạng đang hoạt động dưới dạng số thay vì tên dịch vụ: netstat --numeric-ports
 
-- display process name/PID: netstat -p, --programs
+- Hiển thị tên / PID của process: netstat -p, --programs
 
-- only show tcp socket: netstat --tcp
+- Chỉ hiển thị các kết nối tcp: netstat --tcp
 
-- only show udp socket: netstat --udp
+- Chỉ hiển thị các kết nối udp: netstat --udp
 
 ## sort command: sắp xếp nội dung hiển thị
 
@@ -222,8 +230,8 @@ Dùng Dig command để kiểm tra resolv record A, MX, NS
 - Định nghĩ Hard Link: Là một liên kết trong cùng hệ thống tập tin với 2 inode entry tương ứng trỏ đến cùng một nội dung vật lý (cùng số inode vì chúng trỏ đến cùng dữ liệu).
 
 - Ví dụ về Sym Link và Hard Link:
-**  - Sym Link:
-  - Hard Link:**
+  - Hard Link: giả sử có tệp file1.txt và file2.txt trỏ đến file1.txt => nếu thay đổi nội dung của file1 thì file2 cũng thay đổi theo; nếu xóa file1 thì file2 vẫn còn dữ liệu
+  - Sym Link: lấy vd giống Hard Link, thì file2 là shortcut của file1 => nếu xóa file1 thì liên kết sẽ bị hỏng
  
 ## ls command: liệt kê
 
