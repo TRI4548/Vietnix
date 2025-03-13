@@ -234,7 +234,7 @@ server {
 
     # Khai báo chỗ này để NGINX phục vụ các static content đến người dùng
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
-        root /var/www/laravel.tri.vietnix.tech;
+        root /var/www/laravel.tri.vietnix.tech/laravel-app;
         index index.html index.htm;
         try_files $uri $uri/ =404;  # Serve 404 if file not found
     }
