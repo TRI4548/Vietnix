@@ -1,4 +1,4 @@
-# Mô hình:
+![image](https://github.com/user-attachments/assets/42b3dac9-ee43-4cd9-94f9-c6b9a16dfbb0)# Mô hình:
 
 ![ảnh](https://github.com/user-attachments/assets/221270cc-04c7-4836-9ea4-572d332d2650)
 
@@ -314,12 +314,11 @@ sudo wget https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.s
 
 Kết quả access log của APACHE
 
-![ảnh](https://github.com/user-attachments/assets/0238299c-d62a-4066-bf2e-0f79c871e077)
-
+![image](https://github.com/user-attachments/assets/a31f41aa-3848-4172-b60e-ae99ff393faf)
 
 Kết quả access log của NGINX
 
-![ảnh](https://github.com/user-attachments/assets/a2297c4b-4c5e-4768-a855-bcc4470b4be3)
+![image](https://github.com/user-attachments/assets/83818525-28e2-4f3e-9b1b-ee2dd05e52ea)
 
 => Ta thấy được file hình ảnh đã được NGINX serve tới người dùng, APACHE chỉ thực hiện các truy vấn php, giúp giảm tải server
 
@@ -345,7 +344,50 @@ proxy_cache_path /var/cache/nginx levels=1:2 keys_zone=my_cache:10m max_size=1g 
 
 17. Task (không chạy php-fpm)
 
-*bổ sung
+Quá trình nghiên cứu: 
+[Trước khi sử dụng php-fpm thì người ta sử dụng php gì?](https://g.co/gemini/share/f0b81a37d70a) => Chọn DSO (mod_php) vì CGI và FCGI có liên quan đến PHP-FPM
+
+![image](https://github.com/user-attachments/assets/c2026eb0-ef47-4919-8caf-fb504db107a3)
+
+Cấu hình:
+1. Gỡ cài đặt php-fpm
+
+```
+sudo dnf remove php-fpm -y
+```
+
+2. Chuyển từ CGI/FastCGI Server API (do có liên quan đến php-fpm) sang DSO (mod_php) 
+([Nguồn](https://serverfault.com/questions/318084/how-to-switch-from-cgi-fastcgi-server-api-to-dso))
+
+```
+# Tìm libphp7.so có trong hệ thống hay không
+
+sudo find / -name "libphp7.so"
+
+# Thêm các dòng này vào file cấu hình của httpd (/etc/httpd/conf/httpd.conf)
+
+LoadModule php7_module  modules/libphp7.so
+AddHandler php7-script  .php 
+```
+
+3. Reload lại httpd thì bị báo lỗi AH00534: httpd: Configuration error: No MPM loaded.
+
+![image](https://github.com/user-attachments/assets/324816bf-d10d-421f-958f-cffea5c29743)
+
+
+
+Cách khắc phục: https://www.linuxquestions.org/questions/slackware-14/ah00534-httpd-configuration-error-no-mpm-loaded-4175499888-print/
+
+Vị trí file: /etc/httpd/conf.modules.d/00-mpm.conf
+
+4. Reload lại service http
+
+5. Kiểm tra php chạy DSO hay chưa: kiểm tra bằng tạo file info.php
+
+![image](https://github.com/user-attachments/assets/019f5008-990c-4b38-9b8b-95a11defcfdb)
+
+![image](https://github.com/user-attachments/assets/0e083709-5fa9-4200-a08a-9872e9ab63b8)
+
 
 # Các nguồn tham khảo:
 1. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-web-server-and-reverse-proxy-for-apache-on-one-ubuntu-18-04-server#step-10-blocking-direct-access-to-apache-optional)
