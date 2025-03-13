@@ -372,8 +372,7 @@ AddHandler php7-script  .php
 
 3. Reload lại httpd thì bị báo lỗi AH00534: httpd: Configuration error: No MPM loaded.
 
-![image](https://github.com/user-attachments/assets/324816bf-d10d-421f-958f-cffea5c29743)
-
+![image](https://github.com/user-attachments/assets/019f5008-990c-4b38-9b8b-95a11defcfdb)
 
 
 Cách khắc phục: https://www.linuxquestions.org/questions/slackware-14/ah00534-httpd-configuration-error-no-mpm-loaded-4175499888-print/
@@ -384,7 +383,7 @@ Vị trí file: /etc/httpd/conf.modules.d/00-mpm.conf
 
 5. Kiểm tra php chạy DSO hay chưa: kiểm tra bằng tạo file info.php
 
-![image](https://github.com/user-attachments/assets/019f5008-990c-4b38-9b8b-95a11defcfdb)
+![image](https://github.com/user-attachments/assets/324816bf-d10d-421f-958f-cffea5c29743)
 
 ![image](https://github.com/user-attachments/assets/0e083709-5fa9-4200-a08a-9872e9ab63b8)
 
