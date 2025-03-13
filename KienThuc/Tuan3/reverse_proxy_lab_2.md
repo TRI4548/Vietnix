@@ -2,7 +2,7 @@
 
 ![ảnh](https://github.com/user-attachments/assets/221270cc-04c7-4836-9ea4-572d332d2650)
 
-# Mục tiêu: tạo 2 site wp.tringuyen.space và laravel.tringuyen.space
+# Mục tiêu: tạo 2 site wordpress.tri.vietnix.tech và laravel.tri.vietnix.tech
 - Với NGINX reverse proxy ở frontend để phục vụ cho việc tải nhanh chóng các static content đến người dùng, không phải thông qua web server apache 
 - Web server APACHE ở backend chỉ thực hiện việc yêu cầu các lệnh truy vấn ngôn ngữ PHP
 
@@ -26,45 +26,45 @@ LISTEN 8080
 # Ctrl + X để Save lại
 ```
 
-2. Tạo 2 thư mục cho 2 site wp.tringuyen.space và laravel.tringuyen.space ở /var/www/
+2. Tạo 2 thư mục cho 2 site wordpress.tri.vietnix.tech và laravel.tri.vietnix.tech ở /var/www/
 
 ```
-mkdir /var/www/wp.tringuyen.space
-mkdir /var/www/laravel.tringuyen.space
+mkdir /var/www/wordpress.tri.vietnix.tech
+mkdir /var/www/laravel.tri.vietnix.tech
 ```
 
 3. Tạo 2 file virtual host ở APACHE
 
 ```
-nano /etc/httpd/conf.d/wp.tringuyen.space.conf
+nano /etc/httpd/conf.d/wordpress.tri.vietnix.tech.conf
 
 # Nội dung
 
 <VirtualHost *:8080>
-	ServerAdmin admin@wp.tringuyen.space
-	DocumentRoot /var/www/wp.tringuyen.space/
-	ServerName wp.tringuyen.space
-	#ServerAlias www.wp.tringuyen.space
-	ErrorLog /var/log/httpd/wp.tringuyen.space-error.log
-	CustomLog /var/log/httpd/wp.tringuyen.space-access.log combined
+	ServerAdmin admin@wordpress.tri.vietnix.tech
+	DocumentRoot /var/www/wordpress.tri.vietnix.tech/
+	ServerName wordpress.tri.vietnix.tech
+	#ServerAlias www.wordpress.tri.vietnix.tech
+	ErrorLog /var/log/httpd/wordpress.tri.vietnix.tech-error.log
+	CustomLog /var/log/httpd/wordpress.tri.vietnix.tech-access.log combined
 </VirtualHost>
 
 -------------------------------------------------------------------------------
-nano /etc/httpd/conf.d/laravel.tringuyen.space.conf
+nano /etc/httpd/conf.d/laravel.tri.vietnix.tech.conf
 
 # Nội dung
 
 <VirtualHost *:8080>
-	ServerAdmin admin@laravel.tringuyen.space
-	DocumentRoot /var/www/laravel.tringuyen.space/
-	ServerName laravel.tringuyen.space
-	#ServerAlias www.laravel.tringuyen.space
-	ErrorLog /var/log/httpd/laravel.tringuyen.space-error.log
-	CustomLog /var/log/httpd/laravel.tringuyen.space-access.log combined
+	ServerAdmin admin@laravel.tri.vietnix.tech
+	DocumentRoot /var/www/laravel.tri.vietnix.tech/laravel-app/public
+	ServerName laravel.tri.vietnix.tech
+	#ServerAlias www.laravel.tri.vietnix.tech
+	ErrorLog /var/log/httpd/laravel.tri.vietnix.tech-error.log
+	CustomLog /var/log/httpd/laravel.tri.vietnix.tech-access.log combined
 </VirtualHost>
 ```
 
-4. Cài 2 phiên bản PHP 7.4 cho site wp.tringuyen.space và PHP 8.2 cho site laravel.tringuyen.space
+4. Cài PHP 7.4
 
 ```
 # Lệnh này để liệt kê các phiên bản PHP có sẵn để cài đặt
@@ -73,62 +73,38 @@ dnf module list php
 # Cài PHP 7.4
 sudo dnf module reset php
 sudo dnf module enable php:remi-7.4
-sudo dnf install php74 php74-php-fpm -y
-
-# Cài PHP 8.2
-sudo dnf module reset php
-sudo dnf module enable php:remi-8.2
-sudo dnf install php82 php82-php-fpm -y
-
-# Start dịch vụ và khởi chạy cùng hệ thống khi khởi động
-sudo systemctl start php74-php-fpm
-sudo systemctl enable php74-php-fpm
-
-sudo systemctl start php82-php-fpm
-sudo systemctl enable php82-php-fpm
+sudo dnf install php74 -y
 ```
 
 5. Điều chỉnh 2 file vHost để có thể chạy đúng bản PHP
 
 ```
-nano /etc/httpd/cond.d/wp.tringuyen.space
+nano /etc/httpd/cond.d/wordpress.tri.vietnix.tech
 
 # Nội dung
 
 <VirtualHost *:8080>
-        ServerAdmin admin@wp.tringuyen.space
-        DocumentRoot /var/www/wp.tringuyen.space/wordpress
-        ServerName wp.tringuyen.space
-        #ServerAlias www.wp.tringuyen.space
-        ErrorLog /var/log/httpd/wp.tringuyen.space-error.log
-        CustomLog /var/log/httpd/wp.tringuyen.space-access.log combined
-
-# Thêm các dòng IfModule chạy PHP 7.4
-        <IfModule !mod_php7.c>
-                <FilesMatch \.(php|phar)$>
-                SetHandler "proxy:unix:/var/opt/remi/php74/run/php-fpm/www.sock|fcgi://localhost"
-                </FilesMatch>
-        </IfModule>
+        ServerAdmin admin@wordpress.tri.vietnix.tech
+        DocumentRoot /var/www/wordpress.tri.vietnix.tech/wordpress
+        ServerName wordpress.tri.vietnix.tech
+        #ServerAlias www.wordpress.tri.vietnix.tech
+        ErrorLog /var/log/httpd/wordpress.tri.vietnix.tech-error.log
+        CustomLog /var/log/httpd/wordpress.tri.vietnix.tech-access.log combined
 </VirtualHost>
 
-nano /etc/httpd/cond.d/wp.tringuyen.space
+=====================================================================================
+
+nano /etc/httpd/cond.d/laravel.tri.vietnix.tech
 
 # Nội dung
 
-<VirtualHost *:8000> # app laravel sẽ chạy port 8000
-        ServerAdmin admin@laravel.tringuyen.space
-        DocumentRoot /var/www/laravel.tringuyen.space/laravel-app
-        ServerName laravel.tringuyen.space
-        #ServerAlias www.laravel.tringuyen.space
-        ErrorLog /var/log/httpd/laravel.tringuyen.space-error.log
-        CustomLog /var/log/httpd/laravel.tringuyen.space-access.log combined
-
-# Thêm các dòng IfModule chạy PHP 8.2
-        <IfModule !mod_php8.c>
-                <FilesMatch \.(php|phar)$>
-                SetHandler "proxy:unix:/var/opt/remi/php82/run/php-fpm/www.sock|fcgi://localhost"
-                </FilesMatch>
-        </IfModule>
+<VirtualHost *:8080>
+        ServerAdmin admin@laravel.tri.vietnix.tech
+        DocumentRoot /var/www/laravel.tri.vietnix.tech/laravel-app
+        ServerName laravel.tri.vietnix.tech
+        #ServerAlias www.laravel.tri.vietnix.tech
+        ErrorLog /var/log/httpd/laravel.tri.vietnix.tech-error.log
+        CustomLog /var/log/httpd/laravel.tri.vietnix.tech-access.log combined
 </VirtualHost>
 ```
 
@@ -149,7 +125,7 @@ sudo mysql_secure_installation
 7. Tạo các Database cho site Wordpress và Laravel
 
 ```
-# Tạo cho site wp.tringuyen.space
+# Tạo cho site wordpress.tri.vietnix.tech
 
 mysql -u root -p
 
@@ -160,7 +136,7 @@ GRANT ALL ON wordpress_db.* TO 'wordpress_tringuyen'@'%';
 FLUSH PRIVILEGES;
 EXIT;
 
-# Tạo cho site laravel.tringuyen.space
+# Tạo cho site laravel.tri.vietnix.tech
 
 mysql -u root -p
 
@@ -175,13 +151,13 @@ EXIT;
 8. Cài WordPress
 
 ```
-cd /var/www/wp.tringuyen.space/
+cd /var/www/wordpress.tri.vietnix.tech/
 
 sudo wget https://wordpress.org/latest.tar.gz
 
 sudo tar -xvzf latest.tar.gz
 
-# Truy cập web wp.tringuyen.space:8080 để cài đặt
+# Truy cập web wordpress.tri.vietnix.tech:8080 để cài đặt
 ```
 
 9. Cài Laravel
@@ -190,14 +166,10 @@ sudo tar -xvzf latest.tar.gz
 # Cài composer
 
 # Tạo project Laravel
-cd /var/www/laravel.tringuyen.space
+cd /var/www/laravel.tri.vietnix.tech
 composer create-project laravel/laravel-app
 
-cd laravel-app
-# Tạo project Laravel và xuất output vào file nohup.out
-nohup php artisan serve > nohup.out 2>&1 &
-
-# Truy cập web laravel.tringuyen.space:8000 để kiểm tra
+# Truy cập web laravel.tri.vietnix.tech:8080 để kiểm tra
 
 # cấu hình DB cho laravel
 nano .env
@@ -218,17 +190,17 @@ dnf install nginx -y
 Cấu hình 2 NGINX block
 
 ```
-nano /etc/nginx/conf.d/wp.tringuyen.space.conf
+nano /etc/nginx/conf.d/wordpress.tri.vietnix.tech.conf
 
 # Nội dung
 
 server {
     listen 80;
-    server_name wp.tringuyen.space;
+    server_name wordpress.tri.vietnix.tech;
 
     # Khai báo chỗ này để NGINX phục vụ các static content đến người dùng
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
-        root /var/www/wp.tringuyen.space;
+        root /var/www/wordpress.tri.vietnix.tech;
         index index.html index.htm;
         try_files $uri $uri/ =404;  # Serve 404 if file not found
     }
@@ -252,24 +224,24 @@ server {
 # Sau đó Save lại
 
 # Cấu hình tương tự với Laravel
-nano /etc/nginx/conf.d/laravel.tringuyen.space.conf
+nano /etc/nginx/conf.d/laravel.tri.vietnix.tech.conf
 
 # Nội dung
 
 server {
     listen 80;
-    server_name laravel.tringuyen.space;
+    server_name laravel.tri.vietnix.tech;
 
     # Khai báo chỗ này để NGINX phục vụ các static content đến người dùng
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
-        root /var/www/laravel.tringuyen.space;
+        root /var/www/laravel.tri.vietnix.tech;
         index index.html index.htm;
         try_files $uri $uri/ =404;  # Serve 404 if file not found
     }
 
     # Khai báo chỗ này để xử lý các request khác đến APACHE
     location / {
-        proxy_pass http://localhost:8000;
+        proxy_pass http://localhost:8080;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -315,8 +287,8 @@ systemctl restart nginx
 dnf install -y certbot python3-certbot-nginx
 
 # Tạo SSL cho 2 site
-certbot --nginx -d wp.tringuyen.space
-certbot --nginx -d laravel.tringuyen.space
+certbot --nginx -d wordpress.tri.vietnix.tech
+certbot --nginx -d laravel.tri.vietnix.tech
 
 # Kiểm tra lại bằng cách vào từng site trên web, nếu bị lỗi mất CSS thì đổi file cấu hình trong DocRoot của từng site sao cho chuyển từ http sang https
 
@@ -325,19 +297,19 @@ certbot --nginx -d laravel.tringuyen.space
 
 14. Kiểm tra 2 site có SSL hay chưa
 
-![ảnh](https://github.com/user-attachments/assets/9ecce58c-4b0f-44bc-a820-07b4530dbacd)
+![image](https://github.com/user-attachments/assets/5999c262-5a61-47f4-a8b0-c337472bcf73)
 
 
-![ảnh](https://github.com/user-attachments/assets/7648ecfa-ad05-4e7c-903e-7dfa8b83324c)
+![image](https://github.com/user-attachments/assets/cd0826b7-def3-47f9-9e05-7b99e1a496ac)
 
 
 15. Test dịch vụ thông qua nginx log và apache log
 
 ```
-# Thực hiện tải 1 file vào thư mục docroot của site wp.tringuyen.space và thử truy cập
-sudo wget https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1280px-Nginx_logo.svg.png -O /var/www/wp.tringuyen.space/wordpress/nginx-logo.png
+# Thực hiện tải 1 file vào thư mục docroot của site wordpress.tri.vietnix.tech và thử truy cập
+sudo wget https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/1280px-Nginx_logo.svg.png -O /var/www/wordpress.tri.vietnix.tech/wordpress/nginx-logo.png
 
-# Truy cập https://wp.tringuyen.space/nginx-logo.png
+# Truy cập https://wordpress.tri.vietnix.tech/nginx-logo.png
 ```
 
 Kết quả access log của APACHE
@@ -364,12 +336,16 @@ nano /etc/nginx/nginx.conf
 proxy_cache_path /var/cache/nginx levels=1:2 keys_zone=my_cache:10m max_size=1g inactive=60m use_temp_path=off;
 ```
 
-- Apply nội dung sau đây vào site wp.tringuyen.space trong NGINX block trong mục location /
+- Apply nội dung sau đây vào site wordpress.tri.vietnix.tech trong NGINX block trong mục location /
 
 ```
     proxy_cache my_cache;
     proxy_cache_valid 200 1h;  # Cache 200 responses for 1 hour
 ```
+
+17. Task (không chạy php-fpm)
+
+*bổ sung
 
 # Các nguồn tham khảo:
 1. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-web-server-and-reverse-proxy-for-apache-on-one-ubuntu-18-04-server#step-10-blocking-direct-access-to-apache-optional)
