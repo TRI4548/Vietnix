@@ -17,10 +17,11 @@ SSL (Secure Socket Layer) là một tiêu chuẩn công nghệ bảo mật đư�
  
 #### Các loại chứng chỉ: DV, OV, EV, ngoài ra còn có Wildcard SSL, Subject Alternative Names – SANs SSL
 
-#### Có bao nhiêu cách chứng thực SSL ? 2 cách
+#### Có bao nhiêu cách chứng thực SSL ? 3 cách
 
- - One-way: Máy chủ được yêu cầu trình bày chứng chỉ cho máy khách nhưng máy khách không bắt buộc phải trình bày chứng chỉ cho máy chủ
- - Two-way: Máy chủ và máy khách đều phải xác thực chứng chỉ của nhau để chứng mình danh tính
+ - Xác thực bằng mail
+ - Xác thực bằng DNS
+ - Xác thực bằng file
 
 #### CSR file dùng làm gì trong quá trình tạo SSL?
 
