@@ -73,5 +73,7 @@ Quay video kiểm tra tốc độ gõ phím 10 ngón:
 
 ### Tuần 3
 [1. Thực hiện lại lab reverse proxy thuần lệnh](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/reverse_proxy_lab_2.md)
+
 [2. Kiến thức Linux](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan3/KienThucLinux.md)
+
 [3. Kiến thức về Linux, SSL, mail, domain và dns](https://github.com/TRI4548/Vietnix/blob/main/KienThuc/Tuan3/CacKienThuc-SSL-Mail-Domain-DNS.md)
