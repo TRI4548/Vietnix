@@ -155,3 +155,6 @@ openssl pkcs12 -export -certpbe PBE-SHA1-3DES -keypbe PBE-SHA1-3DES -nomac -out 
 ```
 5. Import file pfx vào mục certificate trong IIS manager
 6. Vào binding tạo https rồi kiểm tra website
+
+## Redirect http sang https
+Tham khảo: https://www.ssl.com/how-to/redirect-http-to-https-with-windows-iis-10/
