@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/42b3dac9-ee43-4cd9-94f9-c6b9a16dfbb0)# Mô hình:
+# Mô hình:
 
 ![ảnh](https://github.com/user-attachments/assets/221270cc-04c7-4836-9ea4-572d332d2650)
 
