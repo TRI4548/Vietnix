@@ -142,3 +142,16 @@ Check IP của Windows Server
 ![ảnh](https://github.com/user-attachments/assets/afbc61d4-71d4-436c-91ed-4fa454e5a1a9)
 
 Đã cài đặt thành công SQL Server 2022 trên Windows Server 2022
+
+
+## Cài SSL cho IIS
+
+1. Tạo thư mục /well-known/pki-validation => vô iis tạo virtual directory ở website cụ thể => locate thư mục
+2. Download text validate rồi để vào thư mục
+3. Tạo bộ file cert, private key và ca-bundle và download
+4. Từ bộ file đó tạo ra file pfx bằng openssl
+```
+openssl pkcs12 -export -certpbe PBE-SHA1-3DES -keypbe PBE-SHA1-3DES -nomac -out domain.pfx -inkey private.key -in certificate.crt -CAfile  ca-bundle.crt
+```
+5. Import file pfx vào mục certificate trong IIS manager
+6. Vào binding tạo https rồi kiểm tra website
