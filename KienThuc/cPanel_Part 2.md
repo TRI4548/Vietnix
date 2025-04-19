@@ -6,8 +6,7 @@
 
 - MultiPHP Manager (hỗ trợ bởi cPanel): tùy chọn các phiên bản PHP khác nhau cho từng website.
 
-- Select PHP Version (hỗ trợ bởi cloudlinux): giống MultiPHP Manager của cPanel nhưng thường chỉ sử dụng để cài thêm các PHP extensions
-
+- Select PHP Version (hỗ trợ bởi cloudlinux): áp dụng version PHP giống nhau cho toàn bộ website, thường sẽ cài thêm extension ở đây
 - Setup Node.js App: hỗ trợ người dùng cài đặt các ứng dụng có mã nguồn nodejs
 
 - Cronjob: lập lịch chạy tự động
